@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Groceries</title>
+	</head>
+	<body>
+		<h2> It's your Grocery List!</h2>
+		<h3> click a button below to either add an item or remove an item from the list.</h3>
+		<ul id="glist">
+			
+		</ul>
+		<br><br>
+		<button onclick="addItem()">Add Item</button> 
+		<button onclick="removeItem()">Remove Last Item</button> 
+
+
+		<script>
+			let groceryList=[""];
+
+
+		function listItems(){
+	 		document.getElementById("glist").innerHTML+="<li>"+groceryList.toString()+"</li>";
+	 		 }
+		function addItem(){
+		 	groceryList.unshift(prompt("Enter item: "));
+			listItems(0); 	
+			}
+		function removeItem(){
+			groceryList.shift();
+			listItems();
+			}
+
+		</script>		
+	
+
+		
+	</body>
+</html>
